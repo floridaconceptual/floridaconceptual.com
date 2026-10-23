@@ -6,9 +6,11 @@
 <title>Florida Conceptual Design</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Florida Conceptual Design: metal design, steel detailing, drafting, engineering and consulting for metals projects. Request a quote.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,13 +18,14 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./" aria-label="Florida Conceptual Design, home">
-      <span class="brand-mark" aria-hidden="true">FCD</span>
-      <span class="brand-name">Florida Conceptual<br>Design</span>
+      <img src="img/fcd-logo-96.png" alt="" width="48" height="48">
+      <span class="brand-name">Florida Conceptual Design<small>Metals · Detailing · Engineering</small></span>
     </a>
     <nav class="nav" aria-label="Main">
       <a href="./" aria-current="page">Home</a>
-      <a href="quotes.html">Design &amp; Quotes</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
+      <a class="nav-cta" href="quotes.html">Request a quote</a>
     </nav>
   </div>
 </header>
@@ -31,52 +34,111 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="label">Metal design · Detailing · Engineering</p>
-        <h1>Metal concepts,<br><span>drawn to build.</span></h1>
-        <p class="hero-lede">Stairs, railings, canopies, ladders, embeds and miscellaneous metals. Florida Conceptual Design takes your idea or your architect's intent and turns it into concepts and shop drawings a fabricator can build from, with engineering through licensed partners when the job needs a seal.</p>
+        <p class="label">Miscellaneous &amp; structural metals</p>
+        <h1>Metal design and detailing,<br><span>drawn to be built.</span></h1>
+        <p class="hero-lede">Stairs, railings, canopies, ladders, embeds and connections. We take your idea or the architect's intent and turn it into concepts and shop drawings a fabricator can build from, with engineering through licensed partners when the job needs a seal.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="quotes.html">Request a quote</a>
-          <a class="btn btn-ghost" href="#services">See services</a>
+          <a class="btn btn-ghost" href="#services">Our services</a>
         </div>
       </div>
 
-      <figure class="hero-figure sheet" style="margin:0">
-        <svg class="draw" viewBox="0 0 520 330" role="img" aria-label="Line drawing of a guardrail elevation with 42 inch height and 4 foot post spacing dimensions">
-          <g fill="none" stroke="#3DE0F5" stroke-width="2" stroke-linecap="square">
-            <line class="anim" x1="40" y1="250" x2="480" y2="250" stroke-width="3"/>
-            <line class="anim" x1="70" y1="90" x2="450" y2="90" stroke-width="4"/>
-            <line class="anim" x1="70" y1="225" x2="450" y2="225"/>
-            <path class="anim" d="M70 250V86M196 250V86M322 250V86M450 250V86" stroke-width="4"/>
+      <figure class="hero-figure sheet">
+        <svg class="draw" viewBox="0 0 560 380" role="img" aria-label="Blueprint detail of a beam-to-column shear tab connection: W12x26 beam bolted to a 3/8 inch plate welded to a W10x33 column, three 3/4 inch bolts at 3 inch spacing">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M20 0H0V20" fill="none" stroke="#1D3150" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="560" height="380" fill="#14243A"/>
+          <rect width="560" height="380" fill="url(#grid)"/>
+
+          <!-- Gridline A -->
+          <g stroke="#6F8AA8" stroke-width="1" fill="none">
+            <path d="M145 46V352" stroke-dasharray="14 4 2 4"/>
+            <circle cx="145" cy="30" r="14"/>
           </g>
-          <g stroke="#1F6E7A" stroke-width="1.5">
-            <path d="M85 90v135M100 90v135M115 90v135M130 90v135M145 90v135M160 90v135M175 90v135M211 90v135M226 90v135M241 90v135M256 90v135M271 90v135M286 90v135M301 90v135M337 90v135M352 90v135M367 90v135M382 90v135M397 90v135M412 90v135M427 90v135"/>
+          <text x="145" y="35" text-anchor="middle" fill="#C9D6E4" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600">A</text>
+
+          <!-- Column W10x33 -->
+          <g fill="none" stroke="#C9D6E4" stroke-width="2">
+            <path class="anim" d="M118 60V340M126 60V340M164 60V340M172 60V340"/>
+            <path d="M118 60h54M118 340h54" stroke-width="1.2"/>
           </g>
-          <g fill="#1F6E7A">
-            <rect x="60" y="250" width="20" height="6"/><rect x="186" y="250" width="20" height="6"/><rect x="312" y="250" width="20" height="6"/><rect x="440" y="250" width="20" height="6"/>
+
+          <!-- Beam W12x26 -->
+          <g fill="none" stroke="#C9D6E4" stroke-width="2">
+            <path class="anim" d="M180 130H524M180 138H524M180 224H524M180 232H524"/>
+            <path d="M180 130v8M180 224v8" stroke-width="1.2"/>
+            <path d="M524 126v110" stroke-width="1" stroke-dasharray="6 4"/>
           </g>
-          <g stroke="#A3A8B8" stroke-width="1" fill="none">
-            <path d="M488 90h14M488 250h14M495 90v160"/>
-            <path d="M491 96l4-6 4 6M491 244l4 6 4-6"/>
-            <path d="M70 280v14M196 280v14M70 287h126"/>
-            <path d="M76 283l-6 4 6 4M190 283l6 4-6 4"/>
+
+          <!-- Shear plate -->
+          <rect x="172" y="146" width="66" height="70" fill="#1B3150" stroke="#C9D6E4" stroke-width="1.6"/>
+          <!-- Fillet weld marks -->
+          <g stroke="#C9D6E4" stroke-width="1">
+            <path d="M172 150l6 -4M172 160l6 -4M172 170l6 -4M172 180l6 -4M172 190l6 -4M172 200l6 -4M172 210l6 -4"/>
           </g>
-          <g fill="#EEF0F5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" font-weight="500">
-            <text x="470" y="174" transform="rotate(-90 470 174)" text-anchor="middle">42" AFF</text>
-            <text x="133" y="311" text-anchor="middle">4'-0" O.C.</text>
-            <text x="260" y="40" text-anchor="middle" fill="#A3A8B8" font-size="11">1 1/2" SCH 40 PIPE RAIL · 1/2" SQ PICKETS @ 4" MAX</text>
+
+          <!-- Bolts -->
+          <g fill="none" stroke="#C9D6E4" stroke-width="1.6">
+            <circle cx="214" cy="158" r="7"/><circle cx="214" cy="181" r="7"/><circle cx="214" cy="204" r="7"/>
           </g>
-          <g fill="none" stroke="#FF3EA5" stroke-width="1.5">
-            <circle cx="40" cy="40" r="20"/>
-            <line x1="20" y1="40" x2="60" y2="40"/>
+          <g stroke="#6F8AA8" stroke-width="1">
+            <path d="M204 158h20M214 148v20M204 181h20M214 171v20M204 204h20M214 194v20"/>
           </g>
-          <g fill="#FF3EA5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">
-            <text x="40" y="35">1</text><text x="40" y="54">S-501</text>
+
+          <!-- Bolt spacing dimension -->
+          <g stroke="#6F8AA8" stroke-width="1" fill="none">
+            <path d="M226 158h34M226 181h34M226 204h34M254 158v46"/>
+            <path d="M250 162l4-4 4 4M250 177l4 4 4-4M250 185l4-4 4 4M250 200l4 4 4-4"/>
           </g>
+          <text x="266" y="185" fill="#C9D6E4" font-family="IBM Plex Mono, monospace" font-size="11">3" TYP</text>
+
+          <!-- Beam depth dimension -->
+          <g stroke="#6F8AA8" stroke-width="1" fill="none">
+            <path d="M528 130h20M528 232h20M542 130v102"/>
+            <path d="M538 136l4-6 4 6M538 226l4 6 4-6"/>
+          </g>
+          <text x="532" y="186" transform="rotate(-90 532 186)" text-anchor="middle" fill="#C9D6E4" font-family="IBM Plex Mono, monospace" font-size="11">12 1/4"</text>
+
+          <!-- Weld symbol -->
+          <g stroke="#C9D6E4" stroke-width="1.2" fill="none">
+            <path d="M175 148L246 86H330"/>
+            <path d="M280 86l10 10V86" fill="#C9D6E4"/>
+            <path d="M330 86l10 -8M330 86l10 8"/>
+          </g>
+          <g fill="#C9D6E4" font-family="IBM Plex Mono, monospace" font-size="11">
+            <text x="262" y="106">1/4</text>
+            <text x="346" y="90">TYP</text>
+          </g>
+
+          <!-- Member labels -->
+          <g fill="#C9D6E4" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600">
+            <text x="152" y="300" transform="rotate(-90 152 300)" text-anchor="middle">W10x33</text>
+            <text x="420" y="122" text-anchor="middle">W12x26</text>
+          </g>
+          <g stroke="#6F8AA8" stroke-width="1" fill="none"><path d="M236 214L300 268H360"/></g>
+          <g fill="#9FB3C9" font-family="IBM Plex Mono, monospace" font-size="10.5">
+            <text x="304" y="262">PL 3/8 x 4 1/2 x 0'-7 1/2"</text>
+            <text x="304" y="282">(3) 3/4" A325-N BOLTS</text>
+          </g>
+
+          <!-- Detail callout -->
+          <g fill="none" stroke="#C9D6E4" stroke-width="1.2">
+            <circle cx="470" cy="320" r="24"/>
+            <path d="M446 320h48"/>
+          </g>
+          <g fill="#C9D6E4" font-family="IBM Plex Mono, monospace" font-weight="600" text-anchor="middle">
+            <text x="470" y="314" font-size="13">3</text>
+            <text x="470" y="336" font-size="10">S-301</text>
+          </g>
+          <text x="24" y="368" fill="#6F8AA8" font-family="IBM Plex Mono, monospace" font-size="10">BEAM TO COLUMN SHEAR TAB · ELEVATION</text>
         </svg>
         <figcaption class="title-block">
-          <div>Detail<strong>Guardrail elevation</strong></div>
-          <div>Scale<strong>1/2" = 1'-0"</strong></div>
-          <div>Sheet<strong>S-501</strong></div>
+          <div>Detail<strong>Shear tab connection</strong></div>
+          <div>Scale<strong>1 1/2" = 1'-0"</strong></div>
+          <div>Sheet<strong>S-301</strong></div>
         </figcaption>
       </figure>
     </div>
@@ -87,34 +149,34 @@
       <div class="section-head">
         <div>
           <p class="label">Services</p>
-          <h2>What we draw</h2>
-          <p class="section-intro">One shop for the metals scope, from the first sketch to the drawings that go to the fabricator and the field.</p>
+          <h2>What we provide</h2>
+          <p class="section-intro">One partner for the metals scope, from the first concept to the drawings that go to the shop and the field.</p>
         </div>
-        <a class="btn btn-primary" href="quotes.html">Get a quote</a>
+        <a class="btn btn-primary" href="quotes.html">Request a quote</a>
       </div>
       <div class="services">
         <article class="service">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10h4v11M9 15h4v6M13 21V6h6v15"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10h4v11M9 15h4v6M13 21V6h6v15"/></svg>
           <h3>Metal design &amp; concepts</h3>
           <p>Stairs, railings, guardrails, ladders, canopies, gates and ornamental metals, designed to fit the space and the budget.</p>
         </article>
         <article class="service">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9M14 13h4M14 16h3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9M14 13h4M14 16h3"/></svg>
           <h3>Steel detailing</h3>
           <p>Shop and erection drawings, BIM and IFC models, and material lists coordinated for fabrication and install.</p>
         </article>
         <article class="service">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 20 4M4 20h6M4 20v-6M15 4h5v5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 20 4M4 20h6M4 20v-6M15 4h5v5"/></svg>
           <h3>Drafting</h3>
           <p>CAD drafting, redlines turned into clean sets, as-builts and submittal drawings.</p>
         </article>
         <article class="service">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/><path d="M8.5 3.5 12 2l3.5 1.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/><path d="M8.5 3.5 12 2l3.5 1.5"/></svg>
           <h3>Engineering</h3>
           <p>Connection design and calculations, with signed and sealed drawings provided through licensed engineering partners.</p>
         </article>
         <article class="service">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4.5"/></svg>
           <h3>Consulting</h3>
           <p>Constructability reviews, RFI and submittal support, and coordination between design, the shop and the field.</p>
         </article>
@@ -153,10 +215,13 @@
 
 <footer id="contact" class="site-footer">
   <div class="wrap">
-    <div class="footer-col">
-      <h2>Florida Conceptual Design</h2>
-      <span>Metal design, detailing, drafting, engineering and consulting.</span>
-      <a class="email-line" href="mailto:m.james@floridaconceptual.com">m.james@floridaconceptual.com</a>
+    <div class="footer-brand">
+      <img src="img/fcd-logo-96.png" alt="" width="56" height="56">
+      <div class="footer-col">
+        <h2>Florida Conceptual Design</h2>
+        <span>Metal design, detailing, drafting, engineering and consulting.</span>
+        <a class="email-line" href="mailto:m.james@floridaconceptual.com">m.james@floridaconceptual.com</a>
+      </div>
     </div>
     <div class="footer-col">
       <a href="quotes.html">Request a quote</a>
