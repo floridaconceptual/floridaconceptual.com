@@ -24,7 +24,7 @@
     <nav class="nav" aria-label="Main">
       <a href="./">Home</a>
       <a href="./#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="quotes.html#quote-form">Contact</a>
       <a class="nav-cta" href="quotes.html" aria-current="page">Request a quote</a>
     </nav>
   </div>
@@ -41,7 +41,14 @@
 
   <section class="section">
     <div class="wrap quote-layout">
-      <form id="quote-form" class="form" novalidate data-endpoint="https://api.web3forms.com/submit" data-key="76192ae6-371a-4b26-868a-9706a35c055a" data-email="m.james@floridaconceptual.com">
+      <form id="quote-form" class="form" novalidate data-endpoint="https://api.web3forms.com/submit" data-key="76192ae6-371a-4b26-868a-9706a35c055a">
+        <fieldset class="field full choice">
+          <legend>What can we help with? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-row">
+            <label class="radio" for="q-inq-quote"><input id="q-inq-quote" type="radio" name="inquiry" value="Quote request" checked> Request a quote</label>
+            <label class="radio" for="q-inq-general"><input id="q-inq-general" type="radio" name="inquiry" value="General question"> General question</label>
+          </div>
+        </fieldset>
         <div class="field">
           <label for="q-name">Full name <span class="req" aria-hidden="true">*</span></label>
           <input id="q-name" name="name" type="text" autocomplete="name" required>
@@ -58,9 +65,9 @@
           <label for="q-phone">Phone</label>
           <input id="q-phone" name="phone" type="tel" autocomplete="tel">
         </div>
-        <div class="field">
-          <label for="q-service">Service needed <span class="req" aria-hidden="true">*</span></label>
-          <select id="q-service" name="service" required>
+        <div class="field quote-only">
+          <label for="q-service">Service needed <span class="req" id="q-service-req" aria-hidden="true">*</span></label>
+          <select id="q-service" name="service">
             <option value="">Choose one</option>
             <option>Metal design / concept</option>
             <option>Steel detailing (shop drawings)</option>
@@ -70,7 +77,7 @@
             <option>Not sure yet</option>
           </select>
         </div>
-        <div class="field">
+        <div class="field quote-only">
           <label for="q-type">Item type</label>
           <select id="q-type" name="item_type">
             <option value="">Choose one</option>
@@ -84,16 +91,16 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="field">
+        <div class="field quote-only">
           <label for="q-location">Project location</label>
           <input id="q-location" name="location" type="text" placeholder="City, state">
         </div>
-        <div class="field">
+        <div class="field quote-only">
           <label for="q-date">Date needed by</label>
           <input id="q-date" name="needed_by" type="date">
         </div>
         <div class="field full">
-          <label for="q-details">Project details <span class="req" aria-hidden="true">*</span></label>
+          <label for="q-details">Message <span class="req" aria-hidden="true">*</span></label>
           <textarea id="q-details" name="details" required placeholder="Scope, quantities, sizes, finishes, and what drawings or specs you already have."></textarea>
         </div>
         <div class="hp" aria-hidden="true">
@@ -101,7 +108,7 @@
           <input id="q-website" name="botcheck" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Send quote request</button>
+          <button class="btn btn-primary" type="submit">Send message</button>
           <span class="form-note">Fields marked * are required.</span>
         </div>
         <div id="q-status" class="status" role="status" aria-live="polite" hidden></div>
@@ -111,14 +118,13 @@
         <div class="aside-block">
           <p class="label">Drawings &amp; photos</p>
           <h2>Have files?</h2>
-          <p>Email architectural sheets, specs, sketches or site photos with your name in the subject line.</p>
-          <span class="email-line">m.james@floridaconceptual.com</span>
+          <p>Note what you have in your message: concept art, drawings, specs or site photos. We'll reply with a secure link to upload them.</p>
         </div>
         <div class="aside-block">
           <p class="label">Helpful to include</p>
           <h2>For a faster quote</h2>
           <ul>
-            <li>Architectural and structural sheets for the area</li>
+            <li>Architectural sheets for the area</li>
             <li>Spec sections for metals (05 50 00 and similar)</li>
             <li>Finish: galvanized, painted, powder coat, stainless</li>
             <li>Who is fabricating and installing</li>
@@ -137,7 +143,7 @@
       <div class="footer-col">
         <h2>Florida Conceptual Design</h2>
         <span>Metal design, detailing, drafting, engineering and consulting.</span>
-        <a class="email-line" href="mailto:m.james@floridaconceptual.com">m.james@floridaconceptual.com</a>
+        <a class="btn btn-ghost btn-sm" href="quotes.html#quote-form">Contact us</a>
       </div>
     </div>
     <div class="footer-col">
